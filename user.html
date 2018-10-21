@@ -10,9 +10,16 @@
 </head>
 <html>
     <div id="app">
-        <input v-model="query" placeholder="Enter query">
-        <!-- <p>{{query}}hello</p> -->
-        <button v-on:click="getHelp(query)">Get Help</button>
+        <input v-model="query" placeholder="Enter query" v-show="!hasTicket">
+        
+        <button v-on:click="getHelp(query)" v-show="!hasTicket">Get Help</button>
+
+        <div v-if="hasTicket">
+            <h1>Ticket {{ticketId}}</h1>
+            <h2>Status: {{stat(status)}}</h2>
+            <h3>Update History:</h3>
+            <p v-for="tmp in chat">{{tmp}}</p>
+        </div>
     </div>
     <script src="user.js"></script>
 </html>
