@@ -1,0 +1,18 @@
+
+<head>
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- Firebase -->
+    <script src="https://gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <!-- VueFire -->
+    <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+    
+</head>
+<html>
+    <div id="app">
+        <input v-model="query" placeholder="Enter query">
+        <!-- <p>{{query}}hello</p> -->
+        <button v-on:click="getHelp(query)">Get Help</button>
+    </div>
+    <script src="user.js"></script>
+</html>
